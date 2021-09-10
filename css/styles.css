@@ -1,0 +1,195 @@
+#banner
+{
+	display: block;
+	max-width:100%;
+	height: 6em;
+	margin: 0;
+	padding: 0;
+}
+
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background-color: #BDBDBD;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+}
+
+#introtitle
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5em; /* Needs to be 2x that of font-size of .intro to match */
+  width: 15em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+h1
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5em; /* Needs to be 2x that of font-size of .intro to match */
+  width: 15em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#interesttitle
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5em; /* Needs to be 2x that of font-size of .intro to match */
+  width: 15em;
+  display: flex;
+  float: right;
+  bottom: 10em;
+  text-align: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#interestlist
+{
+  font-family: 'Open Sans Condensed', sans-serif;	
+  font-size: 1.25em; /* 2x THIS FONT  >> 2*1.25=2.5 >>*/
+  float: right;
+  height: auto;
+  width: 30em;
+  display: flex;
+  
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+ 
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#indexintro
+{
+  font-family: 'Open Sans Condensed', sans-serif;	
+  font-size: 1.25em; /* 2x THIS FONT  >> 2*1.25=2.5 >>*/
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 30em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+
+.innerbody
+{
+	padding: 2em;
+}
+
+.self {
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 5px;
+  width: 500px;
+}
+
+/* navbanner heavily modified from https://www.w3schools.com/css/css_navbar.asp */
+/*Entire navbanner*/
+.navbanner {
+  background-color: #4F4F4F;
+  top: 0;
+  position: sticky;
+  /*Used to format blocks evenly*/
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+	transition-property: color;
+}
+
+/*Links inside the navbanner*/
+.navbanner a {
+  /* background-color instead of all here, which uses the background color below for the transition only instead of the whole bar which made wonky animations */
+  transition: background-color .3s ease-in-out;
+  float: left;
+  color: #FFFFFF;
+  padding: 10px 120px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap
+}
+
+/*What to change on hover*/
+.navbanner a:hover {
+  background-color: #FFFFFF;
+  color: white;
+  transition: all 0s;
+  background: #00b7ff;
+}
+
+/*.active tag to keep the current page highlighted*/
+.active {
+  background-color: #0076a5;
+  /*/color: white;*/
+}
+
+.fa {
+  padding: 0px;
+  font-size: 4em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 100%;
+}
+
+fa fa-github {
+  text-align:center;
+}
+
+/*Small screen mods, add more later if we iterate on this, these still confuse me :x*/
+@media screen and (max-width: 600px) {
+  .navbanner a:not(:first-child) {display: none;}
+  .navbanner a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbanner.responsive {position: relative;}
+  .navbanner.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbanner.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
