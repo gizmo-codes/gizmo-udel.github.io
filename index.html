@@ -6,6 +6,13 @@
   <link rel="stylesheet" href="css\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
+    })();
+  </script>
 </head>
 
 <body class="body">
@@ -14,7 +21,8 @@
       ← Previous Student</a> <a class="active" href="index.html">Home
     </a>
     <a href="aboutMe.html">About Me</a>
-    <a href="https://mattm401.github.io/" class="fa fa-github" target="_blank" rel="noreferrer noopener"> Course Page</a>
+    <a href="https://mattm401.github.io/" class="fa fa-github" target="_blank" rel="noreferrer noopener"> Course
+      Page</a>
     <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
         class="fa fa-fw fa-user"></i>Contact</a>
     <a href="https://aidanchao.github.io/">Next Student →</a>
@@ -33,7 +41,7 @@
 
     <div id="id01" class="modal">
       <!--Add action page! (JS implementation of email)-->
-      <form class="modal-content animate" action="/action_page.php">
+      <form class="modal-content animate">
         <div>
           <span onclick="document.getElementById('id01').style.display='none'" class="close"
             title="Close Modal">&times;</span>
@@ -41,22 +49,22 @@
 
         <div class="container">
           <label for="user_fname"><b> First Name</b></label>
-          <input type="text" placeholder="First Name" name="user_fname" required>
+          <input type="text" class="user_fname" placeholder="First Name" name="user_fname" required>
           <br>
           <label for="user_lname"><b> Last Name</b></label>
-          <input type="text" placeholder="Last Name" name="user_lname" required>
+          <input type="text" class="user_lname" placeholder="Last Name" name="user_lname" required>
           <br>
           <label for="user_email"><b> eMail</b></label>
-          <input type="text" placeholder="eMail" name="user_email" required>
+          <input type="text" class="user_email" placeholder="eMail" name="user_email" required>
           <br>
           <label for="user_phone"><b> Phone</b></label>
-          <input type="text" placeholder="Phone Number" name="user_phone" required>
+          <input type="text" class="user_phone" placeholder="Phone Number" name="user_phone" required>
           <br>
           <label for="user_message"><b>Message</b></label>
           <br>
-          <textarea type="message" placeholder="Message" name="user_message" required></textarea>
+          <textarea type="message" class="user_message" placeholder="Message" name="user_message" required></textarea>
           <br>
-          <button id="contact-overlay-buttons" type="submit">Submit</button>
+          <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
 
           <button type="button" onclick="document.getElementById('id01').style.display='none'"
             class="cancelbtn">Cancel</button>
