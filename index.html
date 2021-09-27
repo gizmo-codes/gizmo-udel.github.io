@@ -1,58 +1,105 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<title>Personal Website 1</title>
+  <title>Personal Website 1</title>
   <link rel="stylesheet" href="css\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </head>
-<body class="body">	
-	<div class="navbanner">
-        <a href="https://therealistongithub.github.io/">< Previous Student</a>
-		<a class="active" href="index.html">Home</a>
-		<a href="aboutMe.html">About Me</a>
-		<a href="https://aidanchao.github.io/">Next Student ></a>
-	</div>
 
-    <h1>Personal Web Page 1:
-        <!--
-        Name: Matthew Chandler
-        Course: CISC474-010
-        Assignment: Personal Web Page 1
-        UDEL Eamil: gizmo@udel.edu
-        -->
-        </h1>
-
-	<div class="innerbody">
-	
-	
-	
-	<div class="grid-container">
-  <h2 class="grid-item-top" id="introtitle">Introduction</h2>
-  <h2 class="grid-item-top" id="interesttitle">Professional Interests</h2>
-  <div class="grid-item" id="indexintro">
-  
-  <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my personal web page! I am a (semi...) motivated student at UD. <br><br/>
-  <img class="self" src="images\self.jpg">
-  </img>
-  
-  <br><br/>
-	I am currently a senior attempting to graduate this semester but have unfortunately felt unwell recently so I have stayed home as I am supposed to. As a result I might be splitting this semester into two and graduationg in spring 2022, which is fine.</p>
-	</div>  
-	
-  <div class="grid-item" id="interestlist">
-  <ul>
-			<li><b>UX/UI</b></li>
-			<p>I have always been critical of user interfaces, how they're laid out, and how we're expected to navigate them. There is a lot of thought that goes into something as silly as the color of a button. (I have spent way more time on the CSS than the HTML..)</p>
-			<li><b>Backend</b></li>
-			<p>Backend coding is also enjoyable but I miss that instant gratification I get when working on the frontend and seeing my work/progress instantly.</p>
-			<li><b>HTML/CSS/Javascript</b></li>
-			<p>What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code in these languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it so far so we'll see.</p>
-            <font size="10">Course Website: <a href="https://mattm401.github.io/" class="fa fa-github"></a></font>
-	</ul>
+<body class="body">
+  <div class="navbanner">
+    <a href="https://therealistongithub.github.io/">
+      ← Previous Student</a> <a class="active" href="index.html">Home
+    </a>
+    <a href="aboutMe.html">About Me</a>
+    <a href="https://mattm401.github.io/" class="fa fa-github"> Course Page</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
+        class="fa fa-fw fa-user"></i>Contact</a>
+    <a href="https://aidanchao.github.io/">Next Student →</a>
   </div>
-	</div>
-</div>
 
+  <!-- Removed for web formatting reasons in Project 2, a random header does not look good on my website layout! 
+    <h1>
+       Name: Matthew Chandler
+       Course: CISC474-010
+       Assignment: Personal Web Page 1
+       UDEL Eamil: gizmo@udel.edu
+    </h1>
+-->
+
+  <div class="innerbody">
+
+    <div id="id01" class="modal">
+      <!--Add action page! (JS implementation of email)-->
+      <form class="modal-content animate" action="/action_page.php">
+        <div>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+          <label for="user_fname"><b> First Name</b></label>
+          <input type="text" placeholder="First Name" name="user_fname" required>
+          <br>
+          <label for="user_lname"><b> Last Name</b></label>
+          <input type="text" placeholder="Last Name" name="user_lname" required>
+          <br>
+          <label for="user_email"><b> eMail</b></label>
+          <input type="text" placeholder="eMail" name="user_email" required>
+          <br>
+          <label for="user_phone"><b> Phone</b></label>
+          <input type="text" placeholder="Phone Number" name="user_phone" required>
+          <br>
+          <label for="user_message"><b>Message</b></label>
+          <br>
+          <textarea type="message" placeholder="Message" name="user_message" required></textarea>
+          <br>
+          <button id="contact-overlay-buttons" type="submit">Submit</button>
+
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="grid-container">
+      <h2 class="grid-item-top" id="introtitle">Introduction</h2>
+      <h2 class="grid-item-top" id="interesttitle">Professional Interests</h2>
+      <div class="grid-item" id="indexintro">
+
+        <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my personal web page! I am a (semi...) motivated
+          student at UD. <br><br />
+          <img class="self" src="images\self.jpg">
+          </img>
+
+          <br><br />
+          I am currently a senior attempting to graduate this semester but have unfortunately felt unwell recently so I
+          have stayed home as I am supposed to. As a result I might be splitting this semester into two and graduationg
+          in spring 2022, which is fine.</p>
+      </div>
+
+      <div class="grid-item" id="interestlist">
+        <ul>
+          <li><b>UX/UI</b></li>
+          <p>I have always been critical of user interfaces, how they're laid out, and how we're expected to navigate
+            them. There is a lot of thought that goes into something as silly as the color of a button. (I have spent
+            way more time on the CSS than the HTML..)</p>
+          <li><b>Backend</b></li>
+          <p>Backend coding is also enjoyable but I miss that instant gratification I get when working on the frontend
+            and seeing my work/progress instantly.</p>
+          <li><b>HTML/CSS/Javascript</b></li>
+          <p>What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code in these
+            languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it so far so
+            we'll see.</p>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
+  <script src="js\app.js"></script>
 </body>
+
 </html>

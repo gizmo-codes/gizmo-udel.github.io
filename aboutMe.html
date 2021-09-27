@@ -1,61 +1,113 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<title>Personal Website 1</title>
+  <title>Personal Website 1</title>
   <link rel="stylesheet" href="css\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </head>
-<body class="body">	
-	<div class="navbanner">
-        <a href="https://therealistongithub.github.io/">< Previous Student</a>
-		<a href="index.html">Home</a>
-		<a class="active" href="aboutMe.html">About Me</a>
-		<a href="https://aidanchao.github.io/">Next Student ></a>
-	</div>
-	
-	<div class="innerbody">
-        <h1> 
-        <!--
-        Name: Matthew Chandler
-        Course: CISC474-010
-        Assignment: Personal Web Page 1
-        UDEL Eamil: gizmo@udel.edu
-        -->
-        </h1>
-	<br>
-	
-	
-	
-	<div class="grid-container">
-  <h2 class="grid-item-top" id="introtitle">Interesting Fact</h2>
-  <h2 class="grid-item-top" id="interesttitle">Personal Interests</h2>
-  <div class="grid-item" id="indexintro">
-  
-  <p>I drove cross country this summer to California! I know a lot of people in California so I made a trip over and stayed for about 1.5 months. They met me on my drive in <b>Denver</b> where we kept going west visiting all the national parks we could make time for. <br><br/>
-  <img class="self" src="images\self2.jpg">
-  </img>
-  
-  <br><br/>
-	We hiked in <b>Arches National Park</b>, <b>Zion National Park</b>, <b>Grand Canyon National Park</b> and towards the end of my stay we finally visited <b>Yosemite National Park</b>. It's very hard to pick a favorite, I want to go back to each one besides Arches probably. While it was great to see once, it's very monochrome. The hikes were very difficult given we were all beginners, however, we did our fair share and gradually did longer/more difficult ones as the parks progressed.
-  </p>
-	</div>  
-	
-  <div class="grid-item" id="interestlist">
-  <ul>
-			<li><b>Music</b></li>
-			<p>I'm nearly always listening to music. I'm also learning to play the piano whenever I get free time which is nearly none at the moment sadly.</p>
-			<li><b>Games</b></li>
-			<p>I also enjoy PC gaming or occasionaly board games, which I also don't have a lot of time for at the moment! This was a nice way to stay in touch with people while I sat inside for a year and a half...</p>
-			<li><b>Movies/TV Shows</b></li>
-			<p>Largely TV shows. I for some reason am perfectly fine with binging a show for 7 hours but don't want to set aside the 1-2 hours for a movie.</p>
-			<li><b>Fitness</b></li>
-			<p>I miss going to the gym, I stopped when COVID started and it has never really felt safe so I never went back. One day... RIGHT?!...</p>
-            <font size="10">My Website: <a href="https://gizmo-udel.github.io" class="fa fa-github"></a></font>
-	</ul>
-  </div>
-	</div>
-</div>
 
+<body class="body">
+  <div class="navbanner">
+    <a href="https://therealistongithub.github.io/">
+      ← Previous Student</a> <a href="index.html">Home
+    </a>
+    <a class="active" href="aboutMe.html">About Me</a>
+    <a href="https://mattm401.github.io/" class="fa fa-github"> Course Page</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
+        class="fa fa-fw fa-user"></i>Contact</a>
+    <a href="https://aidanchao.github.io/">Next Student →</a>
+  </div>
+
+  <!-- Removed for web formatting reasons in Project 2, a random header does not look good on my website layout! 
+<h1>
+   Name: Matthew Chandler
+   Course: CISC474-010
+   Assignment: Personal Web Page 1
+   UDEL Eamil: gizmo@udel.edu
+</h1>
+-->
+
+  <div class="innerbody">
+
+    <div id="id01" class="modal">
+      <!--Add action page! (JS implementation of email)-->
+      <form class="modal-content animate" action="/action_page.php">
+        <div>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+          <label for="user_fname"><b> First Name</b></label>
+          <input type="text" placeholder="First Name" name="user_fname" required>
+          <br>
+          <label for="user_lname"><b> Last Name</b></label>
+          <input type="text" placeholder="Last Name" name="user_lname" required>
+          <br>
+          <label for="user_email"><b> eMail</b></label>
+          <input type="text" placeholder="eMail" name="user_email" required>
+          <br>
+          <label for="user_phone"><b> Phone</b></label>
+          <input type="text" placeholder="Phone Number" name="user_phone" required>
+          <br>
+          <label for="user_message"><b>Message</b></label>
+          <br>
+          <textarea type="message" placeholder="Message" name="user_message" required></textarea>
+          <br>
+          <button id="contact-overlay-buttons" type="submit">Submit</button>
+
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="grid-container">
+      <h2 class="grid-item-top" id="introtitle">Interesting Fact</h2>
+      <h2 class="grid-item-top" id="interesttitle">Personal Interests</h2>
+      <div class="grid-item" id="indexintro">
+
+        <p>I drove cross country this summer to California! I know a lot of people in California so I made a trip over
+          and stayed for about 1.5 months. They met me on my drive in <b>Denver</b> where we kept going west visiting
+          all the national parks we could make time for. <br><br />
+          <img class="self" src="images\self2.jpg">
+          </img>
+
+          <br><br />
+          We hiked in <b>Arches National Park</b>, <b>Zion National Park</b>, <b>Grand Canyon National Park</b> and
+          towards the end of my stay we finally visited <b>Yosemite National Park</b>. It's very hard to pick a
+          favorite, I want to go back to each one besides Arches probably. While it was great to see once, it's very
+          monochrome. The hikes were very difficult given we were all beginners, however, we did our fair share and
+          gradually did longer/more difficult ones as the parks progressed.
+        </p>
+      </div>
+
+      <div class="grid-item" id="interestlist">
+        <ul>
+          <li><b>Music</b></li>
+          <p>I'm nearly always listening to music. I'm also learning to play the piano whenever I get free time which is
+            nearly none at the moment sadly.</p>
+          <li><b>Games</b></li>
+          <p>I also enjoy PC gaming or occasionaly board games, which I also don't have a lot of time for at the moment!
+            This was a nice way to stay in touch with people while I sat inside for a year and a half...</p>
+          <li><b>Movies/TV Shows</b></li>
+          <p>Largely TV shows. I for some reason am perfectly fine with binging a show for 7 hours but don't want to set
+            aside the 1-2 hours for a movie.</p>
+          <li><b>Fitness</b></li>
+          <p>I miss going to the gym, I stopped when COVID started and it has never really felt safe so I never went
+            back. One day... RIGHT?!...</p>
+          <div id="personal-git">
+            My Website: <a href="https://gizmo-udel.github.io" class="fa fa-github"></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
+  <script src="js\app.js"></script>
 </body>
+
 </html>

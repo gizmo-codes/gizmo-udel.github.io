@@ -7,7 +7,6 @@
 	padding: 0;
 }
 
-
 body
 {
 	margin: 0;
@@ -80,6 +79,11 @@ h1
   border-width: 2px;
 }
 
+#personal-git
+{
+  font-size: 1.25em;
+}
+
 #indexintro
 {
   font-family: 'Open Sans Condensed', sans-serif;	
@@ -133,10 +137,10 @@ div {
   transition: background-color .3s ease-in-out;
   float: left;
   color: #FFFFFF;
-  padding: 10px 120px;
+  padding: 10px 50px;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   white-space: nowrap
 }
 
@@ -156,10 +160,10 @@ div {
 
 .fa {
   padding: 0px;
-  font-size: 4em;
+  font-size: 2em;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -169,6 +173,7 @@ div {
 
 fa fa-github {
   text-align:center;
+  font-size: 3em;
 }
 
 /*Small screen mods, add more later if we iterate on this, these still confuse me :x*/
@@ -192,4 +197,133 @@ fa fa-github {
     display: block;
     text-align: left;
   }
+}
+
+/* Formatting ALL buttons */
+button {
+  background: rgb(240, 240, 240);
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 9px;
+  width: 14%;
+  box-shadow: -1px 0px 1px rgba(26, 128, 224, 0.671);
+  font-weight: bold;
+  font-family: Cagliostro;
+  letter-spacing: 1px;
+  color: rgb(99, 99, 99);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #e04646;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+      -webkit-transform: scale(0)
+  }
+  to {
+      -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+      transform: scale(0)
+  }
+  to {
+      transform: scale(1)
+  }
+}
+
+
+input[type=text]{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=message]{
+  width: 400px;
+  height: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea{
+  height: 200px;
+  width: 80%;
+}
+
+/* Set a style for all buttons */
+#contact-overlay-buttons {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 10px;
+  margin: 15px 10px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
 }
