@@ -9,36 +9,30 @@ window.onclick = function (event) {
 }
 
 
-/*
-function phoneCheck(input) {
-    var phoneno = "???";
-    if (input.value.match(phoneno)) {
+function phoneCheck(phoneno) {
+    var numbers = /^\d{3}-\d{3}-\d{4}$/;
+    if (phoneno.match(numbers)) {
         return true;
     } else {
         return false;
     }
 }
 
-function textCheck(input){
-    var regex=/^[a-zA-Z]+$/;
-    if (input.value == regex){
+function textCheck(input) {
+    var regName = /^[A-Za-z]+$/;
+    if (!regName.test(input.value)) {
+        return false;
+    } else {
         return true;
     }
-    else{
+}
+
+function emailCheck(inputText) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputText.value)) {
+        return true;
+    } else {
         return false;
     }
-}
-*/
-
-function emailCheck(email) 
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
-  {
-    return true
-  }
-  else{
-      return false
-  }
 }
 
 function validate() {
@@ -50,41 +44,38 @@ function validate() {
         let user_email = document.querySelector(".user_email")
         let user_phone = document.querySelector(".user_phone")
         let user_message = document.querySelector(".user_message")
-    
+
         const full_name = user_fname.value + " " + user_lname.value;
 
         e.preventDefault()
-/*
-        if (phonenumber(user_phone.value) == false) {
-            alert("Phone number must follow the following format: 123-456-7890");
-            return false;
-        }
-        
-        if (textCheck(user_fname.value == false || user_lname.value == false)){
-            alert("Use alpha characters only.");
-            return false;
-        }
-*/
-        if (emailCheck(user_email == false))
-        {
-            alert("You have entered an invalid email address!")
+
+        if (phoneCheck(user_phone.value) == false) {
+            alert("Phone number must follow this format: 123-456-7890");
             return false;
         }
 
-        else{
+        if (textCheck(user_fname) == false || textCheck(user_lname) == false) {
+            alert("Use alpha characters only for your name.");
+            return false;
+        }
+
+        if (emailCheck(user_email == false)) {
+            alert("You have entered an invalid email address!")
+            return false;
+        } else {
             sendMail(full_name, user_email, user_phone, user_message);
-            alert("Successfully sent.")
             modal.style.display = "none";
+            alert("Successfully sent.")
         }
     })
 }
 validate();
 
-function sendMail(full_name, user_email, user_phone, user_message){
-    emailjs.send("service_5o55bma","template_nula0di",{
+function sendMail(full_name, user_email, user_phone, user_message) {
+    emailjs.send("service_5o55bma", "template_nula0di", {
         name: "Name: " + full_name,
         email: "eMail: " + user_email.value,
         phone: "Phone: " + user_phone.value,
         message: "Message: " + user_message.value
-        });
+    });
 }
