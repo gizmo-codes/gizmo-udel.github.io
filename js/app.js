@@ -27,11 +27,12 @@ function textCheck(input) {
     }
 }
 
-function emailCheck(inputText) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputText.value)) {
-        return true;
-    } else {
+function emailCheck(input) {
+    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!emailRegex.test(input.value)) {
         return false;
+    } else {
+        return true;
     }
 }
 
@@ -53,19 +54,17 @@ function validate() {
             alert("Phone number must follow this format: 123-456-7890");
             return false;
         }
-
         if (textCheck(user_fname) == false || textCheck(user_lname) == false) {
             alert("Use alpha characters only for your name.");
             return false;
         }
-
-        if (emailCheck(user_email == false)) {
-            alert("You have entered an invalid email address!")
+        if (emailCheck(user_email) == false) {
+            alert("You have entered an invalid email address.\nFormat example: xyz@domain.com")
             return false;
         } else {
             sendMail(full_name, user_email, user_phone, user_message);
             modal.style.display = "none";
-            alert("Successfully sent.")
+            alert("Successfully sent!")
         }
     })
 }
