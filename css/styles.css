@@ -101,10 +101,9 @@ h1
   border-width: 2px;
 }
 
-
 .innerbody
 {
-	padding: 2em;
+	margin-left: 10%;
 }
 
 .self {
