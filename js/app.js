@@ -50,18 +50,64 @@ function validate() {
 
         e.preventDefault()
 
-        if (phoneCheck(user_phone.value) == false) {
-            alert("Phone number must follow this format: 123-456-7890");
+        //Input Validation
+        //Checking for appropriate input.
+        if (user_fname.value.length == 0)
+        { 
+            document.getElementById("user_fname").style.borderColor = "red";
+            document.getElementById("user_fname").placeholder = "Field required!";	
+           return false; 
+        } 
+        if (textCheck(user_fname) == false){
+            document.getElementById("user_fname").style.borderColor = "red";
+            alert("Alpha characters only!");
             return false;
         }
-        if (textCheck(user_fname) == false || textCheck(user_lname) == false) {
-            alert("Use alpha characters only for your name.");
+
+        if (user_lname.value.length == 0)
+        { 
+            document.getElementById("user_lname").style.borderColor = "red";
+            document.getElementById("user_lname").placeholder = "Field required!"; 	
+           return false; 
+        }
+        if (textCheck(user_lname) == false){
+            document.getElementById("user_lname").style.borderColor = "red";
+            alert("Alpha characters only!");
             return false;
+        }
+
+        if (user_email.value.length == 0)
+        { 
+            document.getElementById("user_email").style.borderColor = "red";
+            document.getElementById("user_email").placeholder = "Field required!";	
+           return false; 
         }
         if (emailCheck(user_email) == false) {
-            alert("You have entered an invalid email address.\nFormat example: xyz@domain.com")
+            document.getElementById("user_email").style.borderColor = "red";
+            alert("You have entered an invalid email address.\nFormat example: xyz@domain.com");
             return false;
-        } else {
+        }
+
+        if (user_phone.value.length == 0)
+        { 
+            document.getElementById("user_phone").style.borderColor = "red";
+            document.getElementById("user_phone").placeholder = "Field required!";	
+           return false; 
+        }
+        if (phoneCheck(user_phone.value) == false) {
+            document.getElementById("user_phone").style.borderColor = "red";
+            alert("Incorrect format: 123-456-7890");
+            return false;
+        }
+
+        if (user_message.value.length == 0)
+        { 
+            document.getElementById("user_message").style.borderColor = "red";
+            document.getElementById("user_message").placeholder = "Field required!"; 	
+           return false; 
+        }
+
+        else {
             sendMail(full_name, user_email, user_phone, user_message);
             modal.style.display = "none";
             alert("Successfully sent!")

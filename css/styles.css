@@ -235,6 +235,27 @@ button {
   border: 1px solid #888;
   width: 50%;
   height: auto;
+  border-radius: 8px;
+}
+
+.user_fname {
+  border-radius: 8px;
+}
+
+.user_lname {
+  border-radius: 8px;
+}
+
+.user_email {
+  border-radius: 8px;
+}
+
+.user_phone {
+  border-radius: 8px;
+}
+
+.user_message {
+  border-radius: 8px;
 }
 
 /* The Close Button */
