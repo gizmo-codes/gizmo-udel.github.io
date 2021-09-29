@@ -64,7 +64,7 @@ h1
 #interestlist
 {
   font-family: 'Open Sans Condensed', sans-serif;	
-  font-size: 1.25em; /* 2x THIS FONT  >> 2*1.25=2.5 >>*/
+  font-size: 1.25em; /* THIS FONT size x2 above where noted >> 2*1.25=2.5 >>*/
   float: right;
   height: auto;
   width: 30em;
@@ -87,7 +87,7 @@ h1
 #indexintro
 {
   font-family: 'Open Sans Condensed', sans-serif;	
-  font-size: 1.25em; /* 2x THIS FONT  >> 2*1.25=2.5 >>*/
+  font-size: 1.25em; /* THIS FONT size x2 above where noted >> 2*1.25=2.5 >>*/
   height: auto;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -238,6 +238,7 @@ button {
   border-radius: 8px;
 }
 
+/* Rounded borders for modal contact fields */
 .user_fname {
   border-radius: 8px;
 }
@@ -297,7 +298,7 @@ button {
   }
 }
 
-
+/* Modal contact field sizes */
 input[type=text]{
   width: 30%;
   padding: 12px 20px;

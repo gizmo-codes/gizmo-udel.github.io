@@ -8,7 +8,7 @@ window.onclick = function (event) {
     }
 }
 
-
+// Phone number formatting (123-456-7890)
 function phoneCheck(phoneno) {
     var numbers = /^\d{3}-\d{3}-\d{4}$/;
     if (phoneno.match(numbers)) {
@@ -18,6 +18,7 @@ function phoneCheck(phoneno) {
     }
 }
 
+// Name formatting (alpha characters only)
 function textCheck(input) {
     var regName = /^[A-Za-z]+$/;
     if (!regName.test(input.value)) {
@@ -27,6 +28,7 @@ function textCheck(input) {
     }
 }
 
+// eMail formatting check
 function emailCheck(input) {
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!emailRegex.test(input.value)) {
@@ -36,6 +38,8 @@ function emailCheck(input) {
     }
 }
 
+// Large validation function to check all fields were entered correctly.
+// If validation passes, the contact form is sent to the web owner through eMailJS.
 function validate() {
     let submit = document.querySelector(".submit")
     submit.addEventListener("click", (e) => {
@@ -58,11 +62,14 @@ function validate() {
             document.getElementById("user_fname").placeholder = "Field required!";	
            return false; 
         } 
+        // Alpha Character only validation for name, not needed for specs but working!
+        /*
         if (textCheck(user_fname) == false){
             document.getElementById("user_fname").style.borderColor = "red";
             alert("Alpha characters only!");
             return false;
         }
+        */
 
         if (user_lname.value.length == 0)
         { 
@@ -70,11 +77,14 @@ function validate() {
             document.getElementById("user_lname").placeholder = "Field required!"; 	
            return false; 
         }
+        // Alpha Character only validation for name, not needed for specs but working!
+        /*
         if (textCheck(user_lname) == false){
             document.getElementById("user_lname").style.borderColor = "red";
             alert("Alpha characters only!");
             return false;
         }
+        */
 
         if (user_email.value.length == 0)
         { 
@@ -116,6 +126,7 @@ function validate() {
 }
 validate();
 
+// Send Mail function called if all validation passes, emailing the information through eMailJS.
 function sendMail(full_name, user_email, user_phone, user_message) {
     emailjs.send("service_5o55bma", "template_nula0di", {
         name: "Name: " + full_name,
