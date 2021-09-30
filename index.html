@@ -36,8 +36,13 @@
        UDEL Eamil: gizmo@udel.edu
     </h1>
 -->
-
   <div class="innerbody">
+
+    <!-- Success alert for successfully submitted contact form. -->
+    <div class="alert success" id="alertsuccess" style="display: none;">
+      <span class="closebtn">&times;</span>
+      <strong>Success!</strong> Contact form submitted!
+    </div>
 
     <div id="id01" class="modal">
       <form class="modal-content animate">
@@ -46,26 +51,51 @@
             title="Close Modal">&times;</span>
         </div>
 
+
+        <!--Hidden alert boxes for user feedback-->
+        <div class="alertBox">
+          <div class="alert" id="alert" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong id="alertmessage"></strong>
+          </div>
+
+          <!-- Unused alerts
+          <div class="alert info" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Info!</strong> Indicates a neutral informative change or action.
+          </div>
+
+          <div class="alert warning" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Warning!</strong> Indicates a warning that might need attention.
+          </div> -->
+        </div>
+
         <!--Modal Contact Fields-->
         <!--Previously used "required" here but it seemed against making my own JS logic to check for empty fields so I removed it-->
         <div class="container">
           <label for="user_fname"><b>First Name</b></label>
-          <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name" name="user_fname" id="user_fname">
+          <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name" name="user_fname"
+            id="user_fname">
           <br>
           <label for="user_lname"><b>Last Name</b></label>
-          <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name" name="user_lname" id="user_lname">
+          <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name" name="user_lname"
+            id="user_lname">
           <br>
           <label for="user_email"><b>eMail</b></label>
-          <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com" name="user_email" id="user_email">
+          <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com" name="user_email"
+            id="user_email">
           <br>
           <label for="user_phone"><b>Phone</b></label>
-          <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890" name="user_phone" id="user_phone">
+          <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890" name="user_phone"
+            id="user_phone">
           <br>
           <br>
           <label for="user_message"><b>Message</b></label>
           <br>
           <br>
-          <textarea type="message" onfocus="clearmessage()" class="user_message" placeholder="Message" name="user_message" id="user_message"></textarea>
+          <textarea type="message" onfocus="clearmessage()" class="user_message" placeholder="Message"
+            name="user_message" id="user_message"></textarea>
           <br>
           <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
 
@@ -80,29 +110,37 @@
       <h2 class="grid-item-top" id="interesttitle">Professional Interests</h2>
       <div class="grid-item" id="indexintro">
 
-        <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my personal web page! I am a (semi...) motivated
+        <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my personal web page! I am a (semi...)
+          motivated
           student at UD. <br><br />
           <img class="self" src="images\self.jpg">
           </img>
 
           <br><br />
-          I am currently a senior attempting to graduate this semester but have unfortunately felt unwell recently so I
-          have stayed home as I am supposed to. As a result I might be splitting this semester into two and graduationg
+          I am currently a senior attempting to graduate this semester but have unfortunately felt unwell
+          recently so I
+          have stayed home as I am supposed to. As a result I might be splitting this semester into two and
+          graduationg
           in spring 2022, which is fine.</p>
       </div>
 
       <div class="grid-item" id="interestlist">
         <ul>
           <li><b>UX/UI</b></li>
-          <p>I have always been critical of user interfaces, how they're laid out, and how we're expected to navigate
-            them. There is a lot of thought that goes into something as silly as the color of a button. (I have spent
+          <p>I have always been critical of user interfaces, how they're laid out, and how we're expected to
+            navigate
+            them. There is a lot of thought that goes into something as silly as the color of a button. (I have
+            spent
             way more time on the CSS than the HTML..)</p>
           <li><b>Backend</b></li>
-          <p>Backend coding is also enjoyable but I miss that instant gratification I get when working on the frontend
+          <p>Backend coding is also enjoyable but I miss that instant gratification I get when working on the
+            frontend
             and seeing my work/progress instantly.</p>
           <li><b>HTML/CSS/Javascript</b></li>
-          <p>What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code in these
-            languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it so far so
+          <p>What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code
+            in these
+            languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it
+            so far so
             we'll see.</p>
         </ul>
       </div>
