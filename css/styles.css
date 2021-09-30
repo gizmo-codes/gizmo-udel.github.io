@@ -404,3 +404,9 @@ button:hover {
 .alertBox{
   float: right;
 }
+
+/* To fix HTML5 validation errors */
+li{
+  margin: 30px 0;
+  white-space: pre-line;
+}
