@@ -3,12 +3,12 @@
 
 <head>
   <title>Personal Website 1</title>
-  <link rel="stylesheet" href="css\styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
     (function () {
       emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
     })();
@@ -95,7 +95,7 @@
           <label for="user_message"><b>Message</b></label>
           <br>
           <br>
-          <textarea type="message" onfocus="clearmessage()" class="user_message" placeholder="Message"
+          <textarea onfocus="clearmessage()" class="user_message" placeholder="Message"
             name="user_message" id="user_message"></textarea>
           <br>
           <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
@@ -114,10 +114,10 @@
         <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my personal web page! I am a (semi...)
           motivated
           student at UD. <br><br />
-          <img class="self" src="images\self.jpg">
+          <img class="self" alt="" src="images/self.jpg">
           </img>
 
-          <br><br />
+          <br><br/>
           I am currently a senior attempting to graduate this semester but have unfortunately felt unwell
           recently so I
           have stayed home as I am supposed to. As a result I might be splitting this semester into two and
@@ -128,28 +128,30 @@
       <div class="grid-item" id="interestlist">
         <ul>
           <li><b>UX/UI</b></li>
-          <p>I have always been critical of user interfaces, how they're laid out, and how we're expected to
+          I have always been critical of user interfaces, how they're laid out, and how we're expected to
             navigate
             them. There is a lot of thought that goes into something as silly as the color of a button. (I have
             spent
-            way more time on the CSS than the HTML..)</p>
+            way more time on the CSS than the HTML..)
+            <br><br/>
           <li><b>Backend</b></li>
-          <p>Backend coding is also enjoyable but I miss that instant gratification I get when working on the
+          Backend coding is also enjoyable but I miss that instant gratification I get when working on the
             frontend
-            and seeing my work/progress instantly.</p>
+            and seeing my work/progress instantly.
+            <br><br/>
           <li><b>HTML/CSS/Javascript</b></li>
-          <p>What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code
+          What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code
             in these
             languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it
             so far so
-            we'll see.</p>
+            we'll see.
         </ul>
       </div>
     </div>
   </div>
 
   <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
-  <script src="js\app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

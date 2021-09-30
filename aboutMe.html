@@ -3,11 +3,11 @@
 
 <head>
   <title>Personal Website 1</title>
-  <link rel="stylesheet" href="css\styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
     (function () {
       emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
     })();
@@ -94,7 +94,7 @@
           <label for="user_message"><b>Message</b></label>
           <br>
           <br>
-          <textarea type="message" onfocus="clearmessage()" class="user_message" placeholder="Message"
+          <textarea onfocus="clearmessage()" class="user_message" placeholder="Message"
             name="user_message" id="user_message"></textarea>
           <br>
           <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
@@ -113,8 +113,7 @@
         <p>I drove cross country this summer to California! I know a lot of people in California so I made a trip over
           and stayed for about 1.5 months. They met me on my drive in <b>Denver</b> where we kept going west visiting
           all the national parks we could make time for. <br><br />
-          <img class="self" src="images\self2.jpg">
-          </img>
+          <img class="self" alt="" src="images/self2.jpg"></img>
 
           <br><br />
           We hiked in <b>Arches National Park</b>, <b>Zion National Park</b>, <b>Grand Canyon National Park</b> and
@@ -128,17 +127,21 @@
       <div class="grid-item" id="interestlist">
         <ul>
           <li><b>Music</b></li>
-          <p>I'm nearly always listening to music. I'm also learning to play the piano whenever I get free time which is
-            nearly none at the moment sadly.</p>
+          I'm nearly always listening to music. I'm also learning to play the piano whenever I get free time which is
+            nearly none at the moment sadly.
+            <br><br/>
           <li><b>Games</b></li>
-          <p>I also enjoy PC gaming or occasionaly board games, which I also don't have a lot of time for at the moment!
-            This was a nice way to stay in touch with people while I sat inside for a year and a half...</p>
+          I also enjoy PC gaming or occasionaly board games, which I also don't have a lot of time for at the moment!
+            This was a nice way to stay in touch with people while I sat inside for a year and a half...
+            <br><br/>
           <li><b>Movies/TV Shows</b></li>
-          <p>Largely TV shows. I for some reason am perfectly fine with binging a show for 7 hours but don't want to set
-            aside the 1-2 hours for a movie.</p>
+          Largely TV shows. I for some reason am perfectly fine with binging a show for 7 hours but don't want to set
+            aside the 1-2 hours for a movie.
+            <br><br/>
           <li><b>Fitness</b></li>
-          <p>I miss going to the gym, I stopped when COVID started and it has never really felt safe so I never went
-            back. One day... RIGHT?!...</p>
+          I miss going to the gym, I stopped when COVID started and it has never really felt safe so I never went
+            back. One day... RIGHT?!...
+            <br><br/>
           <div id="personal-git">
             My Website: <a href="https://gizmo-udel.github.io" class="fa fa-github"></a>
           </div>
@@ -148,7 +151,7 @@
   </div>
 
   <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
-  <script src="js\app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
