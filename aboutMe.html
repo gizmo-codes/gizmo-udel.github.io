@@ -49,22 +49,22 @@
         <!--Previously used "required" here but it seemed against making my own JS logic to check for empty fields so I removed it-->
         <div class="container">
           <label for="user_fname"><b>First Name</b></label>
-          <input type="text" class="user_fname" placeholder="First Name" name="user_fname" id="user_fname">
+          <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name" name="user_fname" id="user_fname">
           <br>
           <label for="user_lname"><b>Last Name</b></label>
-          <input type="text" class="user_lname" placeholder="Last Name" name="user_lname" id="user_lname">
+          <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name" name="user_lname" id="user_lname">
           <br>
           <label for="user_email"><b>eMail</b></label>
-          <input type="text" class="user_email" placeholder="xyz@domain.com" name="user_email" id="user_email">
+          <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com" name="user_email" id="user_email">
           <br>
           <label for="user_phone"><b>Phone</b></label>
-          <input type="text" class="user_phone" placeholder="123-456-7890" name="user_phone" id="user_phone">
+          <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890" name="user_phone" id="user_phone">
           <br>
           <br>
           <label for="user_message"><b>Message</b></label>
           <br>
           <br>
-          <textarea type="message" class="user_message" placeholder="Message" name="user_message" id="user_message"></textarea>
+          <textarea type="message" onfocus="clearmessage()" class="user_message" placeholder="Message" name="user_message" id="user_message"></textarea>
           <br>
           <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
 

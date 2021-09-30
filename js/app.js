@@ -38,6 +38,27 @@ function emailCheck(input) {
     }
 }
 
+function clearfname(){
+    document.getElementById("user_fname").style.borderColor = "";
+}
+
+function clearlname(){
+    document.getElementById("user_lname").style.borderColor = "";
+}
+
+function clearemail(){
+    document.getElementById("user_email").style.borderColor = "";
+}
+
+function clearphone(){
+    document.getElementById("user_phone").style.borderColor = "";
+}
+
+function clearmessage(){
+    document.getElementById("user_message").style.borderColor = "";
+}
+
+
 // Large validation function to check all fields were entered correctly.
 // If validation passes, the contact form is sent to the web owner through eMailJS.
 
