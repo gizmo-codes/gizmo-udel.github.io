@@ -1,4 +1,4 @@
-// Get the modal
+// Get the contact form modal
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -40,6 +40,8 @@ function emailCheck(input) {
 
 // Large validation function to check all fields were entered correctly.
 // If validation passes, the contact form is sent to the web owner through eMailJS.
+
+// TODO: Implement logic so that ALL fields are checked all at once, instead of the current implementation of top to bottom.
 function validate() {
     let submit = document.querySelector(".submit")
     submit.addEventListener("click", (e) => {
@@ -56,6 +58,8 @@ function validate() {
 
         //Input Validation
         //Checking for appropriate input.
+
+        //Checking First Name for empty field
         if (user_fname.value.length == 0)
         { 
             document.getElementById("user_fname").style.borderColor = "red";
@@ -71,6 +75,7 @@ function validate() {
         }
         */
 
+        // Checking Last Name for empty field.
         if (user_lname.value.length == 0)
         { 
             document.getElementById("user_lname").style.borderColor = "red";
@@ -86,30 +91,35 @@ function validate() {
         }
         */
 
+        // Checking eMail for empty field.
         if (user_email.value.length == 0)
         { 
             document.getElementById("user_email").style.borderColor = "red";
             document.getElementById("user_email").placeholder = "Field required!";	
            return false; 
         }
+        // Checking eMail for correct formatting.
         if (emailCheck(user_email) == false) {
             document.getElementById("user_email").style.borderColor = "red";
             alert("You have entered an invalid email address.\nFormat example: xyz@domain.com");
             return false;
         }
 
+        // Checking Phone Number for empty field.
         if (user_phone.value.length == 0)
         { 
             document.getElementById("user_phone").style.borderColor = "red";
             document.getElementById("user_phone").placeholder = "Field required!";	
            return false; 
         }
+        // Checking phone number for 123-456-7890 format.
         if (phoneCheck(user_phone.value) == false) {
             document.getElementById("user_phone").style.borderColor = "red";
             alert("Incorrect format: 123-456-7890");
             return false;
         }
 
+        // Checking message for empty field.
         if (user_message.value.length == 0)
         { 
             document.getElementById("user_message").style.borderColor = "red";
@@ -117,6 +127,7 @@ function validate() {
            return false; 
         }
 
+        // If all of the above pass, call the sendMail function and close the modal.
         else {
             sendMail(full_name, user_email, user_phone, user_message);
             modal.style.display = "none";
