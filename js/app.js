@@ -77,8 +77,8 @@ function clearmessage() {
 // If validation passes, the contact form is sent to the web owner through eMailJS.
 
 // TODO: Implement logic so that ALL fields are checked all at once, instead of the current implementation of top to bottom.
-// TODO: Implement a better error display than alert(), nothing I have tried worked :( 
-// TODO: Look into style.display showing the alert when an error occurs
+// TODO [DONE]: Implement a better error display than alert(), nothing I have tried worked :( 
+// TODO [DONE]: Look into style.display showing the alert when an error occurs
 function validate() {
     let submit = document.querySelector(".submit")
     submit.addEventListener("click", (e) => {
