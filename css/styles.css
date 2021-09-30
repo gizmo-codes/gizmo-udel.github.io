@@ -158,8 +158,8 @@ div {
 }
 
 .fa {
-  padding: 0px;
-  font-size: 2em;
+  padding: 4px;
+  font-size: 1.6em !important;
   text-align: center;
   text-decoration: none;
   border-radius: 25%;
@@ -172,7 +172,6 @@ div {
 
 fa fa-github {
   text-align:center;
-  font-size: 3em;
 }
 
 /*Small screen mods, add more later if we iterate on this, these still confuse me :x*/
