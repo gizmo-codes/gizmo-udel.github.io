@@ -104,6 +104,8 @@ h1
 .innerbody
 {
 	margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 1%;
 }
 
 .self {
@@ -414,4 +416,107 @@ button:hover {
 li{
   margin: 30px 0;
   white-space: pre-line;
+}
+
+#javaprojecttitle
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em; /* Needs to be 2x that of font-size of .intro to match */
+  width: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#printerprojectintro
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: flex;
+  text-align: center;
+  font-size: .8em;
+}
+
+#projectexampleintro
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: flex;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#barcode
+{
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: flex;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
+
+#barcodeexplain
+{
+  font-family: 'Open Sans Condensed', sans-serif;	
+  font-size: 1.25em;
+  float: left;
+  height: auto;
+  width: 15em;
+  display: flex;
+  
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+
+#classtitle
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5em; /* Needs to be 2x that of font-size of .intro to match */
+  width: 15em;
+  display: flex;
+  float: right;
+  bottom: 10em;
+  text-align: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#classlist
+{
+  font-family: 'Open Sans Condensed', sans-serif;	
+  font-size: 1.25em; /* 2x THIS FONT  >> 2*1.25=2.5 >>*/
+  float: right;
+  height: auto;
+  width: 30em;
+  display: flex;
+  
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+ 
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#javaprojectprocess
+{
+  font-family: 'Open Sans Condensed', sans-serif;	
+  font-size: .8em;
+  float: left;
+  height: auto;
+  display: flex;
+  
+  text-align: left;
+  justify-content: left;
+
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
 }
