@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-  <title>Personal Website 1</title>
+  <title>Personal Website 3</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -17,22 +17,28 @@
 
 <body class="body">
   <div class="navbanner">
-    <a href="https://therealistongithub.github.io/">
-      ← Previous Student</a> <a class="active" href="index.html">Home
+    <a class="active" href="index.html">Home
     </a>
     <a href="projects.html">Projects</a>
-    <a href="https://mattm401.github.io/" class="fa fa-github" target="_blank" rel="noreferrer noopener"> Course
-      Page</a>
-    <a href="#" onclick="document.getElementById('id01').style.display='block'"><i
+    <a href="resume.html">Resume</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
         class="fa fa-fw fa-user"></i>Contact</a>
-    <a href="https://aidanchao.github.io/">Next Student →</a>
+    <div class="dropdown">
+      <button class="dropbtn">More<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="https://aidanchao.github.io/">Next Student</a>
+        <a href="https://therealistongithub.github.io/">Previous Student</a>
+        <a href="https://mattm401.github.io/" target="_blank" rel="noreferrer noopener"> Course
+          Page</a>
+      </div>
+    </div>
   </div>
 
-  <!-- Removed header text for web formatting reasons in Project 2, a random header does not look good on my website layout! 
+  <!-- Removed header text for web formatting reasons in Project 2+, a random header does not look good on my website layout! 
     <h1>
        Name: Matthew Chandler
        Course: CISC474-010
-       Assignment: Personal Website 2
+       Assignment: Personal Website 3
        UDEL Eamil: gizmo@udel.edu
     </h1>
 -->
@@ -142,6 +148,10 @@
     </div>
   </div>
 
+  <footer>
+    <p>Author: Matthew Chandler<br>
+    <a href="mailto:gizmo@udel.edu">gizmo@udel.edu</a></p>
+  </footer>
   <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
   <script src="js/app.js"></script>
 </body>
