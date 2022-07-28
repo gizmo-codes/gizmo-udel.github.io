@@ -1,182 +1,215 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html class="no-js" lang="en">
 
 <head>
-  <title>Personal Website 3</title>
-  <meta name="description"
-    content="This is an ePortfolio I made from scratch as I continue to learn HTML, CSS, and Javascript!">
-  <meta name="keywords"
-    content="HTML,CSS,JavaScript,Portfolio,ePortfolio,e-Portfolio,School Project,Capstone,Computer Science,UX,UI,User Experience,Java,C++">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2R4Z4QXF6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-H2R4Z4QXF6');
-  </script>
-
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
-    })();
-  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body class="body">
-  <div class="navbanner">
-    <a class="active" href="index.html">Home
-    </a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
-        class="fa fa-fw fa-user"></i>Contact</a>
-    <div class="dropdown">
-      <button class="dropbtn">More<i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-content">
-        <a href="https://aidanchao.github.io/">Next Student</a>
-        <a href="https://therealistongithub.github.io/">Previous Student</a>
-        <a href="https://mattm401.github.io/" target="_blank" rel="noreferrer noopener"> Course
-          Page</a>
-      </div>
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-  </div>
-
-  <!-- Removed header text for web formatting reasons in Project 2+, a random header does not look good on my website layout! 
-    <h1>
-       Name: Matthew Chandler
-       Course: CISC474-010
-       Assignment: Personal Website 3
-       UDEL Eamil: gizmo@udel.edu
-    </h1>
--->
-  <div class="innerbody">
-
-    <!-- Success alert for successfully submitted contact form. -->
-    <div class="alert success" id="alertsuccess" style="display: none;">
-      <span class="closebtn">&times;</span>
-      <strong>Success!</strong> Contact form submitted!
-    </div>
-
-    <!--Modal Start-->
-    <div id="id01" class="modal">
-      <form class="modal-content animate">
-        <div>
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-
-
-        <!--Hidden alert boxes for user feedback-->
-        <div class="alertBox">
-          <div class="alert" id="alert" style="display: none;">
-            <span class="closebtn">&times;</span>
-            <strong id="alertmessage"></strong>
-          </div>
-
-          <!-- Unused alerts
-          <div class="alert info" style="display: none;">
-            <span class="closebtn">&times;</span>
-            <strong>Info!</strong> Indicates a neutral informative change or action.
-          </div>
-
-          <div class="alert warning" style="display: none;">
-            <span class="closebtn">&times;</span>
-            <strong>Warning!</strong> Indicates a warning that might need attention.
-          </div> -->
-        </div>
-
-        <!--Modal Contact Fields-->
-        <!--Previously used "required" here but it seemed against making my own JS logic to check for empty fields so I removed it-->
-        <div class="container">
-          <label for="user_fname"><b>First Name</b></label>
-          <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name" name="user_fname"
-            id="user_fname">
-          <br>
-          <label for="user_lname"><b>Last Name</b></label>
-          <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name" name="user_lname"
-            id="user_lname">
-          <br>
-          <label for="user_email"><b>eMail</b></label>
-          <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com" name="user_email"
-            id="user_email">
-          <br>
-          <label for="user_phone"><b>Phone</b></label>
-          <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890" name="user_phone"
-            id="user_phone">
-          <br>
-          <br>
-          <label for="user_message"><b>Message</b></label>
-          <br>
-          <br>
-          <textarea onfocus="clearmessage()" class="user_message" placeholder="Message" name="user_message"
-            id="user_message"></textarea>
-          <br>
-          <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
-
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancel</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="grid-container">
-      <h2 class="grid-item-top" id="introtitle">Introduction</h2>
-      <h2 class="grid-item-top" id="interesttitle">Professional Interests</h2>
-      <div class="grid-item" id="indexintro">
-
-        <p>Hi! My name is <b>Matthew Chandler (Matt)</b>, welcome to my e-portfolio! I am a
-          motivated
-          student at UD. <br><br />
-          <img class="self" alt="" src="images/self.jpg">
-
-          <br><br />
-          I am currently a senior attempting to graduate this semester but have unfortunately felt unwell
-          recently so I
-          have stayed home as I am supposed to. As a result I might be splitting this semester into two and
-          graduating
-          in spring 2022.</p>
-      </div>
-
-      <div class="grid-item" id="interestlist">
-        <ul>
-          <li><b>UX/UI</b>
-            I have always been critical of user interfaces, how they're laid out, and how we're expected to navigate
-            them. There is a lot of thought that goes into something as silly as the color of a button. (I have spent
-            way more time on the CSS than the HTML..)
-          </li>
-
-          <li><b>Backend</b>
-            Backend coding is also enjoyable but I miss that instant gratification I get when working on the frontend
-            and seeing my work/progress instantly.
-          </li>
-
-          <li><b>HTML/CSS/Javascript</b>
-            What I have done with HTML/CSS/Javascript has been enjoyable but I'm not sure I would want to code in these
-            languages as a full time job. They are a great introduction to UX/UI though, and I have enjoyed it so far so
-            we'll see.
-          </li>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
         </ul>
-      </div>
-    </div>
-  </div>
+    </header>
+    <!-- End header -->
 
-  <footer>
-    <p>Author: Matthew Chandler<br>
-      <a href="mailto:gizmo@udel.edu">gizmo@udel.edu</a></p>
-  </footer>
-  <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
-  <script src="js/app.js"></script>
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Matt Chandler</h1>
+            <h2>Software Engineer</h2>
+            <a href="https://drive.google.com/uc?export=download&id=1IFUw6O_w20_oVqHEKd3YAt8_zxY_F03Q" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div id="abcon"class="container">
+            <h2 class="heading">About Me</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        I'm a recent graduate from the University of Delaware with a Computer Science degree. I'm currently still working on
+                        a couple projects so I can continue learning while I start looking for work! You can view the project code and a demo below.<br><br>
+
+                        I self host all my projects with a domain managed through CloudFlare and reverse proxies managed through NGINX. -- 
+                        I have also successfully deployed on Azure with docker containers.<br><br>
+
+                        You can check out any of the projects linked here on GitHub with more in-depth information
+                        regarding features and methods used for the functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+  
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of Delaware (UD)</h3>
+            <span class="education-date">February 2020 - May 2022</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>
+                After finishing my associates, I transferred to UD to finish out my bachelors degree.
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Delaware Technical Community College (DTCC)</h3>
+            <span class="education-date">September 2017 - December 2019</span>
+            <h4>Associates Degree in Computing and Information Science</h4>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Current Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/npi.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>NPI Checker</h3>
+                        <p>
+                            NPI chekcer allows you to search for any doctor in the U.S. through a government API.
+                            Doctor information (API1) and insurance information (API2) is then combined in a table and displayed to
+                            the user.
+                            <br><br>
+
+                            This information is needed and used in a mission critical environment, therefore me and a partner implemented
+                            a more reliable SQLite database backup/query that triggers when either API query fails.<br><br>
+
+                            NPI Checker is the most complete project I have worked on all the way to this self deployment version. I have several
+                            different versions of this project on the GitHub below as I contuned improving the product to learn dockers/deployment. 
+                        </p>
+                        <a href="https://npi.omzig.dev" target="_blank" rel="noopener noreferrer">Live Project</a> |
+                        <a href="https://github.com/gizmo-udel/npi-selfhost" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/smidgen.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>SMIDGen</h3>
+                        <p>
+                            SMIDGen is another web-app used to query the twitter API and return results based on your search.
+                            SMIDGen features authentication, user, project, and data management through firebase. You are able 
+                            to save the results of your query to a database tied to your project.<br><br>
+
+                            This app is still very much in-progress, and the full vision includes analyzing the data through
+                            machine learning/AI models that suits the users needs.<br><br>
+
+                            This was my senior capstone project at UD that is being carried on next semester.
+                        </p>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript/CSS/HTML</li>
+            <li>Python</li>
+            <li>Node</li>
+            <li>Flask</li>
+            <li>C++</li>
+            <li>Azure</li>
+            <li>Docker</li>
+            <li>SQL (SQLite, Oracle, MySQL)</li>
+            <li>Firebase</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2022</span>
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/gizmo-udel/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/matthew-chandler-21b748245" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
