@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Personal Website 3</title>
+  <meta name="description"
+    content="This is an ePortfolio I made from scratch as I continue to learn HTML, CSS, and Javascript!">
+  <meta name="keywords"
+    content="HTML,CSS,JavaScript,Portfolio,ePortfolio,e-Portfolio,School Project,Capstone,Computer Science,UX,UI,User Experience,Java,C++">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2R4Z4QXF6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H2R4Z4QXF6');
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
+    })();
+  </script>
+</head>
+
+<body class="body">
+  <div class="navbanner">
+    <a href="index.html">Home
+    </a>
+    <a class="active" href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
+        class="fa fa-fw fa-user"></i>Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">More<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="https://aidanchao.github.io/">Next Student</a>
+        <a href="https://therealistongithub.github.io/">Previous Student</a>
+        <a href="https://mattm401.github.io/" target="_blank" rel="noreferrer noopener"> Course
+          Page</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Removed for web formatting reasons in Project 2+, a random header does not look good on my website layout! 
+<h1>
+   Name: Matthew Chandler
+   Course: CISC474-010
+   Assignment: Personal Website 3
+   UDEL Eamil: gizmo@udel.edu
+</h1>
+-->
+
+  <div class="innerbody">
+
+    <!-- Success alert for successfully submitted contact form. -->
+    <div class="alert success" id="alertsuccess" style="display: none;">
+      <span class="closebtn">&times;</span>
+      <strong>Success!</strong> Contact form submitted!
+    </div>
+
+    <!-- Modal Start -->
+    <div id="id01" class="modal">
+      <form class="modal-content animate">
+        <div>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+
+        <!-- Hidden alert boxes for user feedback -->
+        <div class="alertBox">
+          <div class="alert" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong></strong>
+          </div>
+
+          <!-- Unused alerts
+          <div class="alert info" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Info!</strong> Indicates a neutral informative change or action.
+          </div>
+
+          <div class="alert warning" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Warning!</strong> Indicates a warning that might need attention.
+          </div> -->
+        </div>
+
+        <!-- Modal Contact Fields -->
+        <!-- Previously used "required" here but it seemed against making my own JS logic to check for empty fields so I removed it -->
+        <div class="container">
+          <label for="user_fname"><b>First Name</b></label>
+          <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name" name="user_fname"
+            id="user_fname">
+          <br>
+          <label for="user_lname"><b>Last Name</b></label>
+          <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name" name="user_lname"
+            id="user_lname">
+          <br>
+          <label for="user_email"><b>eMail</b></label>
+          <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com" name="user_email"
+            id="user_email">
+          <br>
+          <label for="user_phone"><b>Phone</b></label>
+          <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890" name="user_phone"
+            id="user_phone">
+          <br>
+          <br>
+          <label for="user_message"><b>Message</b></label>
+          <br>
+          <br>
+          <textarea onfocus="clearmessage()" class="user_message" placeholder="Message" name="user_message"
+            id="user_message"></textarea>
+          <br>
+          <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
+
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="grid-item-top" id="javaprojecttitle">Toner Project</div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p id="printerprojectintro">My largest and most practical project while learning Java was an <b>inventory
+            management system</b>. The project gave a real world scenario of a client coming to our classroom and
+          proposing a problem they had that we were then expected to find a solution for.
+          <br></br>
+          The project was very enlightening and gave me a real look at the process that takes place when you're
+          working with a client on a product that they want. This project was done in a group as most projects done in
+          field are conducted in teams.
+          <br></br>
+          <b>My team had to conduct the following:</b>
+          <div id="javaprojectprocess">
+            <ul>
+              <li><b>Requirements Interview</b></li>
+              <p>We interviewed the client with intelligent questions to figure out exactly what he wants from our
+                team. After a discussion within the team we can then plan follow-up questions the team is unsure of or
+                needs clarification on. We then moved into documentation.</p>
+              <li><b>Documentation</b></li>
+              <p>By now our team had the appropriate requirements needed for the project and we were able to move onto
+                documentation. Here we produced a full software requirements specification document (SRS) which then
+                allowed us to flow into a unified modeling language (UML) diagram. From here we started
+                implementation.</p>
+              <li><b>Implementation</b></li>
+              <p>Here is where we <b>finally</b> get into the programming. Now that we have our proper documentation
+                and general idea for the application we can then start writing code. The documentation made this much
+                easier as it is laid out right in the paper what inputs, outputs, functions, etc. are needed. The
+                program practically writes itself at this point.</p>
+            </ul>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <br></br><br></br><br></br>
+
+    <div class="grid-item-top" id="javaprojecttitle">Printer Cartridge Inventory System (PCIS)</div>
+
+    <p id="projectexampleintro">
+      We named our project <b>Printer Cartridge Inventory System</b>. Our goal was to make it easier for the tech
+      support workers at our location to check if there was ink available for the printers located within their
+      institution.
+    </p>
+
+    <div class="grid-container">
+      <div class="grid-item" id="barcode">
+        <img src="images\java\startScreen.png"></img>
+      </div>
+
+      <div class="grid-item" id="barcodeexplain">
+        <p>
+          This is our simple interface.
+          <br></br>
+          Here, the user can enter a barcode found on the side of the printer to check the current available inventory
+          for matching ink cartridges.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item" id="barcode">
+        <img src="images\java\incorrectBarCode.png"></img>
+      </div>
+
+      <div class="grid-item" id="barcodeexplain">
+        <p>
+          If the user enters an incorrect number that is not in our database, there is a prompt presented with
+          feedback.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item" id="barcode">
+        <img src="images\java\correctBarCode.png"></img>
+      </div>
+
+      <div class="grid-item" id="barcodeexplain">
+        <p>
+          Once a correct code is entered that corresponds to an existing printer, the model number of the printer
+          (B5460DN) and ink model number that corresponds to that printer (X5GDJ) are displayed with the current stock
+          available.
+          <br></br>
+          This lets the technician know if there is ink available for replacement without having to physically check
+          and also gives an idea as to weather they need to order more as the current stock may be getting low.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item" id="barcode">
+        <img src="images\java\twoComments.png"></img>
+      </div>
+
+      <div class="grid-item" id="barcodeexplain">
+        <p>
+          Finally, if the technician wants to enter a comment for the room so future or repeat issues can be corrected
+          quickly, then they can enter a comment into the box shown.
+          <br></br>
+          Multiple comments can be entered for the same room and have a relevant information tagged above each comment
+          such as the date and time that the comment was made.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Author: Matthew Chandler<br>
+      <a href="mailto:gizmo@udel.edu">gizmo@udel.edu</a></p>
+  </footer>
+  <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

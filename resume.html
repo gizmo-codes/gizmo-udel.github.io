@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Personal Website 3</title>
+    <meta name="description"
+        content="This is an ePortfolio I made from scratch as I continue to learn HTML, CSS, and Javascript!">
+    <meta name="keywords"
+        content="HTML,CSS,JavaScript,Portfolio,ePortfolio,e-Portfolio,School Project,Capstone,Computer Science,UX,UI,User Experience,Java,C++">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2R4Z4QXF6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H2R4Z4QXF6');
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("user_dQ67UzKJBbuVEBSqDA9Kf");
+        })();
+    </script>
+</head>
+
+<body class="body">
+    <div class="navbanner">
+        <a href="index.html">Home
+        </a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i
+                class="fa fa-fw fa-user"></i>Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">More<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="https://aidanchao.github.io/">Next Student</a>
+                <a href="https://therealistongithub.github.io/">Previous Student</a>
+                <a href="https://mattm401.github.io/" target="_blank" rel="noreferrer noopener"> Course
+                    Page</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Removed for web formatting reasons in Project 2+, a random header does not look good on my website layout! 
+<h1>
+   Name: Matthew Chandler
+   Course: CISC474-010
+   Assignment: Personal Website 3
+   UDEL Eamil: gizmo@udel.edu
+</h1>
+-->
+
+    <div class="innerbody">
+
+        <!-- Success alert for successfully submitted contact form. -->
+        <div class="alert success" id="alertsuccess" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Success!</strong> Contact form submitted!
+        </div>
+
+        <!-- Modal Start -->
+        <div id="id01" class="modal">
+            <form class="modal-content animate">
+                <div>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                </div>
+
+                <!-- Hidden alert boxes for user feedback -->
+                <div class="alertBox">
+                    <div class="alert" style="display: none;">
+                        <span class="closebtn">&times;</span>
+                        <strong></strong>
+                    </div>
+
+                    <!-- Unused alerts
+          <div class="alert info" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Info!</strong> Indicates a neutral informative change or action.
+          </div>
+
+          <div class="alert warning" style="display: none;">
+            <span class="closebtn">&times;</span>
+            <strong>Warning!</strong> Indicates a warning that might need attention.
+          </div> -->
+                </div>
+
+                <!-- Modal Contact Fields -->
+                <!-- Previously used "required" here but it seemed against making my own JS logic to check for empty fields so I removed it -->
+                <div class="container">
+                    <label for="user_fname"><b>First Name</b></label>
+                    <input type="text" onfocus="clearfname()" class="user_fname" placeholder="First Name"
+                        name="user_fname" id="user_fname">
+                    <br>
+                    <label for="user_lname"><b>Last Name</b></label>
+                    <input type="text" onfocus="clearlname()" class="user_lname" placeholder="Last Name"
+                        name="user_lname" id="user_lname">
+                    <br>
+                    <label for="user_email"><b>eMail</b></label>
+                    <input type="text" onfocus="clearemail()" class="user_email" placeholder="xyz@domain.com"
+                        name="user_email" id="user_email">
+                    <br>
+                    <label for="user_phone"><b>Phone</b></label>
+                    <input type="text" onfocus="clearphone()" class="user_phone" placeholder="123-456-7890"
+                        name="user_phone" id="user_phone">
+                    <br>
+                    <br>
+                    <label for="user_message"><b>Message</b></label>
+                    <br>
+                    <br>
+                    <textarea onfocus="clearmessage()" class="user_message" placeholder="Message" name="user_message"
+                        id="user_message"></textarea>
+                    <br>
+                    <button id="contact-overlay-buttons" class="submit" name="submit" type="submit">Submit</button>
+
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grid-item-top" id="javaprojecttitle">Resume</div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <p id="printerprojectintro">
+                    I am currently enrolled in the <b>University of Delaware</b> working towards completeing a
+                    <b>computer science</b> degree. I'm currently in my senior year. Here is a preview of my
+                    professional resume containing what I have learned so far.
+                    <br></br>The full resume is available for download <a
+                        href="https://drive.google.com/uc?export=download&id=172JP8L9S4m2-qCg1k1D1ZR7_T_Q0IDMN">here</a>.
+                    <div id="javaprojectprocess">
+                        <ul>
+                            <li>Several programing languages: C, C++, Java, Python, Lisp, Assembly</li>
+                            <li>Math concepts helpful for several programming projects: Calculus, Statistics, Logic, and
+                                Linear Algebra</li>
+                            <li>Deploying, managing, and querying databases. I largely worked with Oracle, but have
+                                experience with Firebase and SQLite as well.</li>
+                            <li>Useful concepts such as Automata theory, Parallel computing, Operating Systems, Machine
+                                Learning, and Artificial Intelligence.</li>
+                            <li>Have completed several projects involving a web front end with a programming
+                                language/database backend. Experienced in HTML/CSS/Javascript.</li>
+                            <li>Familiar with and have experienced the agile development process while using popular
+                                industry tools such as Jira.</li>
+                        </ul>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br></br>
+
+    <footer>
+        <p>Author: Matthew Chandler<br>
+            <a href="mailto:gizmo@udel.edu">gizmo@udel.edu</a></p>
+    </footer>
+    <!-- At the bottom to allow the HTML to be parsed prior to JS loading. -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
